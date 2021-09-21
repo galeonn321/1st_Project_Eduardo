@@ -112,7 +112,8 @@ h1 {
   color: var(--primary-color);
 }
 
-.social a {
-  margin: 0 5px;
+.logo_image {
+  width: 100px;
+  padding-bottom: 40px;
 }
 /*# sourceMappingURL=video.css.map */
