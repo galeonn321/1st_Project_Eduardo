@@ -91,6 +91,7 @@ hr {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
 
   .toggle-button {
@@ -99,7 +100,6 @@ hr {
 
   .navbar-links {
     display: none;
-    width: 100%;
   }
 
   .navbar-links ul {
@@ -128,34 +128,6 @@ html {
   background-color: #dfdfdf;
 }
 
-.side-links {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-}
-
-.side-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: white;
-  width: 180px;
-  padding: 10px 0;
-  border-radius: 10px;
-}
-
-.side-link-text {
-  margin-left: 10px;
-  font-size: 18px;
-}
-
-.side-link-icon {
-  color: white;
-  font-size: 30px;
-}
-
 button {
   padding: 9px 25px;
   background-color: white;
@@ -172,7 +144,7 @@ button:hover {
 
 .slider {
   width: 100%;
-  height: 98%;
+  height: 1200px;
   background-color: #0e0d0d;
   overflow: hidden;
 }
@@ -180,6 +152,7 @@ button:hover {
   width: 500%;
   height: 500px;
   display: flex;
+  padding-left: 300px;
 }
 .slides input {
   display: none;
@@ -190,10 +163,7 @@ button:hover {
   transition: 1s;
 }
 .slide img {
-  width: 90%;
-  height: 250%;
-  margin-left: 5%;
-  padding-top: 1%;
+  margin-top: 50px;
   border-radius: 50px 50px;
   border-color: aqua;
   border-width: 5px;
@@ -201,7 +171,7 @@ button:hover {
 .navigation-manual {
   position: absolute;
   width: 100%;
-  top: 90%;
+  top: 1100px;
   display: flex;
   justify-content: center;
 }
@@ -210,7 +180,7 @@ button:hover {
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.5s;
 }
 .manual-btn:not(:last-child) {
   margin-right: 40px;
@@ -227,7 +197,9 @@ button:hover {
 #radio3:checked ~ .first {
   margin-left: -40%;
 }
+//EMPIEZA RESPONSIVE SLIDER
 
+// TERMINA EL SLIDER
 .profile__container {
   background: linear-gradient(#0e0d0d, black, black, black, black, black);
   display: flex;

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 @font-face {
   font-family: astro;
   src: url(../Fonts/astro/astro.ttf);
@@ -12,64 +13,141 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 hr {
   border-top: 100px;
   color: #dfd6d5;
+  margin: 0;
 }
 
-li,
-a,
-button {
-  font-family: astro, sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  color: var(--text-white);
-  text-decoration: none;
-}
-
-header {
-  background-color: black;
+.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: black;
+  color: white;
 }
 
-.logo {
-  cursor: pointer;
-  width: 10%;
-  height: 5%;
-  margin-left: 127px;
+.brand-title {
+  width: 200px;
+  margin: 0.5rem;
 }
 
-.nav__links {
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
   list-style: none;
 }
 
-.nav__links li {
-  display: inline-block;
-  padding: 0px 20px;
-  margin-right: 108px;
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
 }
 
-.nav__links li a {
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+.navbar-links li:hover {
+  background-color: #555;
 }
 
-.nav__links li a:hover {
+.navbar-links li a:hover {
   color: aqua;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .toggle-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+  }
+  .navbar-links ul {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar-links ul li {
+    text-align: center;
+  }
+  .navbar-links.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* Background Styles Only */
+* {
+  font-family: Raleway;
+}
+
+html {
+  background-color: #dfdfdf;
 }
 
 button {
@@ -90,7 +168,7 @@ button:hover {
 /*IMAGE SLIDE BEGINS-----------------------------------------------------------*/
 .slider {
   width: 100%;
-  height: 98%;
+  height: 1200px;
   background-color: #0e0d0d;
   overflow: hidden;
 }
@@ -101,6 +179,7 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 300px;
 }
 
 .slides input {
@@ -115,10 +194,7 @@ button:hover {
 }
 
 .slide img {
-  width: 90%;
-  height: 250%;
-  margin-left: 5%;
-  padding-top: 1%;
+  margin-top: 50px;
   border-radius: 50px 50px;
   border-color: aqua;
   border-width: 5px;
@@ -127,7 +203,7 @@ button:hover {
 .navigation-manual {
   position: absolute;
   width: 100%;
-  top: 90%;
+  top: 1100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,8 +217,8 @@ button:hover {
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .manual-btn:not(:last-child) {
@@ -179,7 +255,8 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 200px;
-  height: 1000px;
+  padding-bottom: 1000px;
+  height: 100px;
 }
 
 .profile-photo {
@@ -227,35 +304,84 @@ button:hover {
 
 .experience__Link:hover {
   color: aqua;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 @media only screen and (max-width: 1260px) {
   .profile-photo {
     width: 300px;
   }
+  .experience__Link {
+    margin: 0 auto;
+  }
 }
 
+/* empieza el FOOTER */
 .bottom {
   height: 400px;
-  position: absolute;
   background-color: black;
   width: 100%;
+}
+
+.inner_bottom {
+  color: white;
+  font-size: 1.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 400px;
+  height: 300px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-top: 40px;
+  padding: 40px;
+  margin: auto;
 }
 
-.bottom_logo {
+.bottom img {
   width: 80px;
   height: 80px;
-  position: relative;
-  left: 100px;
   margin-bottom: 40px;
+  position: static;
+}
+
+.bottom_icons {
+  padding-top: 50px;
+}
+
+.fcbicon {
+  color: white;
+}
+
+.bottom_icons i:hover {
+  color: aqua;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.gallery {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+  padding: 100px 150px;
+}
+
+.image__gallery img {
+  width: 100%;
+}
+
+.image__gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 25% 25%;
+      grid-template-columns: 50% 25% 25%;
+  grid-auto-flow: row;
+  gap: 1em;
+  grid-row: span 2;
+  grid-column: span 2;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -7,14 +7,14 @@
     <link rel="icon" href="../Logo/AV2 Logo White Large.png">
     <title>video</title>
 </head>
-<body>
+<body onload="videoRandom()">
     <section class="showcase">
-        <div class="video-container">
-            <video src="../Videos/video1.mp4" autoplay muted loop></video>
+        <div id="container" class="video-container">
+        <video id="videohtml" autoplay muted loop></video>
         </div>
         <div class="content">
             <h1>Capture your dreams</h1>          
-            <a href="#about" class="btn">Read More</a>
+            <a href="./video.html" class="btn">refresh me</a>
         </div>
     </section>
 
@@ -29,6 +29,7 @@
         <h2>Follow Me On Social Media</h2>
    
     </section>
-    
+
+    <script src="../Script/video.js"></script>
 </body>
 </html>
