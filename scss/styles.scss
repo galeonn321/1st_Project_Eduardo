@@ -14,7 +14,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  text-decoration: none;
 }
 
 body {
@@ -91,7 +90,6 @@ hr {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
   }
 
   .toggle-button {
@@ -100,6 +98,7 @@ hr {
 
   .navbar-links {
     display: none;
+    width: 100%;
   }
 
   .navbar-links ul {
@@ -109,6 +108,10 @@ hr {
 
   .navbar-links ul li {
     text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
   }
 
   .navbar-links.active {
@@ -234,9 +237,6 @@ button:hover {
   font-size: 20px;
   font-weight: bold;
 }
-
-/*# sourceMappingURL=styles.css.map */
-/*# sourceMappingURL=styles.css.map */
 .experience__Link {
   text-decoration: underline;
   font-family: Calibri, "Trebuchet MS", sans-serif;
@@ -254,6 +254,51 @@ button:hover {
     margin: 0 auto;
   }
 }
+
+//GRID EMPIEZA
+
+.gallery {
+  background: black;
+  padding: 100px 150px;
+  width: 100%;
+  // AQUI SE DEFINEN LAS PROPIEDADES DEL CONTAINER
+}
+
+.image__gallery {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 5px;
+  column-gap: 5px;
+  overflow: hidden;
+}
+
+.image__gallery div {
+}
+.image__gallery img {
+  border-color: white;
+  border-style: groove;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+//edit de foto por foto
+.gallery__photos1 {
+}
+.gallery__photos1 img {
+}
+.gallery__photos2 {
+}
+.gallery__photos2 img {
+}
+
+.gallery__photos3 {
+}
+.gallery__photos3 img {
+}
+
+//GRID TERMINA
+
 /* empieza el FOOTER */
 .bottom {
   height: 400px;
@@ -287,23 +332,4 @@ button:hover {
 .bottom_icons i:hover {
   color: aqua;
   transition: 1s;
-}
-//Grid de galeria
-
-.gallery {
-  justify-content: center;
-  background-color: black;
-  padding: 100px 150px;
-}
-
-.image__gallery img {
-  width: 100%;
-}
-.image__gallery {
-  display: grid;
-  grid-template-columns: 50% 25% 25%;
-  grid-auto-flow: row;
-  gap: 1em;
-  grid-row: span 2;
-  grid-column: span 2;
 }
