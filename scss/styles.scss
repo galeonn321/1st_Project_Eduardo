@@ -10,7 +10,6 @@
 
 * {
   box-sizing: border-box;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -147,13 +146,12 @@ button:hover {
 
 .slider {
   width: 100%;
-  height: 1200px;
+  height: 100%;
   background-color: #0e0d0d;
   overflow: hidden;
 }
 .slides {
   width: 500%;
-  height: 500px;
   display: flex;
   padding-left: 300px;
 }
@@ -162,19 +160,22 @@ button:hover {
   border-radius: 50px;
 }
 .slide {
-  width: 20%;
+  width: 2000px;
+  height: 500px;
   transition: 1s;
+  padding-right: 1000px;
 }
 .slide img {
   margin-top: 50px;
   border-radius: 50px 50px;
   border-color: aqua;
   border-width: 5px;
+  height: 650px;
 }
 .navigation-manual {
   position: absolute;
   width: 100%;
-  top: 1100px;
+  top: 90%;
   display: flex;
   justify-content: center;
 }
@@ -195,10 +196,10 @@ button:hover {
   margin-left: 0;
 }
 #radio2:checked ~ .first {
-  margin-left: -20%;
+  margin-left: -25%;
 }
 #radio3:checked ~ .first {
-  margin-left: -40%;
+  margin-left: -49%;
 }
 //EMPIEZA RESPONSIVE SLIDER
 
