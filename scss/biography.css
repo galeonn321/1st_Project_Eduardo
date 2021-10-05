@@ -31,6 +31,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-position-x: center;
+  border-radius: 400px;
 }
 
 #quote-1 {
@@ -135,6 +136,8 @@ p span {
   top: 7px;
   float: right;
   right: 18px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .info {
@@ -161,7 +164,6 @@ p span {
 }
 
 #footer {
-  background-color: #ececec;
   height: 200px;
 }
 
@@ -175,15 +177,5 @@ p span {
 
 #final_logo img {
   width: 200px;
-}
-
-a {
-  color: dodgerblue;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: blue;
 }
 /*# sourceMappingURL=biography.css.map */
